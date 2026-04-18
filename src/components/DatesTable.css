@@ -1,0 +1,65 @@
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.quick-actions button {
+  background: rgba(255, 111, 89, 0.1);
+  color: var(--ink);
+}
+
+.dates-layout {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: minmax(16rem, 0.8fr) minmax(0, 1.6fr);
+}
+
+.dates-form {
+  display: grid;
+  gap: 1rem;
+  align-self: start;
+}
+
+.table-card {
+  overflow: auto;
+  border-radius: 1.4rem;
+  border: 1px solid rgba(44, 122, 123, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.table-card table {
+  width: 100%;
+  min-width: 38rem;
+  border-collapse: collapse;
+}
+
+.table-card th,
+.table-card td {
+  padding: 1rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(112, 107, 102, 0.12);
+}
+
+.table-card th {
+  background: rgba(255, 248, 243, 0.95);
+  color: var(--ink);
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.table-card tbody tr:hover {
+  background: rgba(255, 216, 196, 0.18);
+}
+
+@media (max-width: 860px) {
+  .dates-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .table-card table {
+    min-width: 32rem;
+  }
+}

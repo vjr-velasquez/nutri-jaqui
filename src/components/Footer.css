@@ -1,0 +1,50 @@
+.footer-panel {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr);
+  padding: 1.75rem;
+  border-radius: 1.75rem;
+  background:
+    radial-gradient(circle at right top, rgba(255, 217, 79, 0.26), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 241, 234, 0.92));
+  border: 1px solid rgba(191, 112, 81, 0.18);
+}
+
+.footer-copy p:last-child {
+  max-width: 36rem;
+  color: var(--muted);
+}
+
+.footer-actions {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.footer-cta,
+.social-link {
+  display: inline-flex;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer-cta svg,
+.social-link svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+
+@media (max-width: 860px) {
+  .footer-panel {
+    grid-template-columns: 1fr;
+  }
+}

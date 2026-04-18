@@ -1,0 +1,111 @@
+:root {
+  --background: #fff6ef;
+  --background-deep: #ffe8d8;
+  --surface: rgba(255, 255, 255, 0.9);
+  --ink: #2f241f;
+  --muted: #6d625d;
+  --accent: #ff6f59;
+  --accent-soft: #f7b267;
+  --accent-strong: #bf4b34;
+  --secondary: #2c7a7b;
+  --line: rgba(112, 107, 102, 0.14);
+  --font-body: 'Trebuchet MS', 'Gill Sans', sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+
+  color: var(--ink);
+  background: var(--background);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 173, 96, 0.22), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(44, 122, 123, 0.16), transparent 30%),
+    linear-gradient(180deg, var(--background), var(--background-deep));
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at center, black 48%, transparent 82%);
+}
+
+#root {
+  width: min(1380px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 2rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  line-height: 1.08;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.7rem);
+}
+
+h2 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(44, 122, 123, 0.22);
+  outline-offset: 2px;
+}
